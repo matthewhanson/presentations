@@ -9,7 +9,6 @@ references:
   container: &container
     docker:
       - image: circleci/node:8.10.0
-    working_dir: ~/project
 
   restore_repo: &restore_repo
     restore_cache:
@@ -37,8 +36,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            npm install reveal-md
-            ~/node_modules/bin/reveal-md
+            sudo npm install -g reveal-md
 
 
 workflows:

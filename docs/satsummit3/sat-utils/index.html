@@ -1,4 +1,22 @@
-<div>Finding and using public earth imagery with sat-utils</div>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal-md</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+          <link rel="stylesheet" href="./_assets/style.css">
+
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template"><div>Finding and using public earth imagery with sat-utils</div>
 <hr />
 <div>
     <img src='ds-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
@@ -7,26 +25,20 @@
         @geoskeptic
     </div>
 </div>
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Workshop Overview 
 - Overview of public imagery 
 - What is STAC? 
 - Searching image metadata 
 - Downloading imagery 
 - Applications
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## Earth on AWS https://aws.amazon.com/earth/ 
 - Geospatial data stored on AWS S3 
 - Open to everyone 
 - Copies, not original source 
 - Often converted into more friendly formats
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Landsat 
 - Landsat-8 only
 - 5 year archive (since launch) 
@@ -36,9 +48,7 @@
 - Bands separated by file 
 - Revisit Rate: 16 days
 - 30m resolution
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Sentinel 
 - Sentinel-2A launched mid-2015
 - Sentinel-2B launched mid-2017
@@ -48,32 +58,24 @@
 - Bands seperated by file 
 - Revisit rate: 10 days each (5 days with both!) 
 - Requestor Pays bucket
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## The State of satellites
 https://landscape.satsummit.io/ 
 - Overview of current satellites specifications
 - Example applications
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Metadata first
 With growth of satellite data, how do we... 
 - catalog imagery for easy discovery? 
 - minimize sensor specific searches? 
 - avoid having directory of images files and not knowing their source?
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## STAC
 new specification for data providers to... 
 - use common names for fields 
 - describe their imagery 
 - provide consistent API
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## What is STAC?
 Spatio-Temporal Asset Catalog
 
@@ -87,9 +89,7 @@ Spatio-Temporal Asset Catalog
 - REST API for querying geospatial data
 
 https://github.com/radiantearth/stac-spec/
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## A common core: "Where and When" 
 
 | element | description |
@@ -101,9 +101,7 @@ https://github.com/radiantearth/stac-spec/
 | license | Item's license name based on SPDX License List or following guidelines for non-SPDX licenses |
 | links | Array of link objects to resources and related URLs (self required) |
 | assets | Dictionary of asset objects that can be be download |
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## Electro-Optical (EO) extension
 
 | element | description |
@@ -118,9 +116,7 @@ https://github.com/radiantearth/stac-spec/
 | eo:sun_azimuth | Sun azimuth angle. 0-360 degrees, measured clockwise from north |
 | eo:sun_elevation | Sun elevation angle. 0-90 degrees measured from horizon |
 | eo:bands | Band specific metadata (see below) |
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 #### assets and eo:bands
 ```json
 "eo:bands": { 
@@ -154,9 +150,7 @@ https://github.com/radiantearth/stac-spec/
         "href": "url/to/panbandfile",
         "eo:bands": [ "B4" ] }
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Spectral Bands
 
 | Common Name     | Band Range (μm) | Landsat 5 | Landsat 7 | Landsat 8 | Sentinel 2 | MODIS |
@@ -171,9 +165,7 @@ https://github.com/radiantearth/stac-spec/
 |SWIR16    | 1.55 - 1.75 | 5     |     5     |     6    |     11     |     6    
 |SWIR22     |2.1 - 2.3  |  7     |     7     |     7     |    12     |     7        
 |LWIR   | 10.5 - 12.5 |   6    |     6      |     10, 11     |          |      31, 32
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Band Combinations
 
 | Combination Name | Band 1 | Band 2 | Band 3 |
@@ -186,9 +178,7 @@ https://github.com/radiantearth/stac-spec/
 | Land/Water | nir | swir16 | red |
 | Natural With Atmospheric Removal | swir22 | nir | green |
 | Vegetation Analysis | swir16 | nir | red |
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ### sat-api as a dynamic STAC API 
 - STAC compliant 
 - *warning*: upcoming changes
@@ -203,9 +193,7 @@ https://github.com/radiantearth/stac-spec/
 
 
 https://sat-api.developmentseed.org/search/stac
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## Landsat Examples
 
 Item
@@ -215,9 +203,7 @@ Item
 Collection
 
 <div style="font-size: 70%">https://sat-api.developmentseed.org/collections/landsat-8-l1/definition</div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## Using sat-api 
 - Search on any property 
 - Partial datetimes supported 
@@ -228,9 +214,7 @@ Two pass search
     - match on matching field OR missing field
 2. search the items
     - match items within any collection from step 1 - match on matching fields OR missing field
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ## Let's explore sat-api 
 - Install JSONView browser extension Main search endpoint
 
@@ -241,9 +225,7 @@ Landsat-8 scenes from 2017 with 0-20% cloud cover
 
 All scenes between Dec 31 2017 and Jan 1 2018
 <div style="font-size: 70%"> https://sat-api.developmentseed.org/search/stac?datetime=2016-12-31/2017-01-01 </div>
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## sat-utils
 https://github.com/sat-utils
 Utilities(libs/CLIs) for finding and fetching imagery 
@@ -256,9 +238,7 @@ Utilities(libs/CLIs) for finding and fetching imagery
 - sat-gbdx: coming soon
 
 Major releases after STAC 0.6.0
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 # sat-search 
 - Install via pip (Python2.7, Python3.6)
 ```
@@ -270,9 +250,7 @@ $ sat-search search -h
     - http://geojson.io
     - Or, use one you already have
     - Keep it somewhat small, size of a city
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 #### Searching imagery Search for Landsat-8 imagery in your AOI
 ```
 $ sat-search search --intersects aoi.geojson -c landsat-8-l1
@@ -289,9 +267,7 @@ Print date and scene IDs of matching scenes
 ```
 $ sat-search search --intersects aoi.geojson -c landsat-8-l1  --datetime 2016-01-01/2016-12-31 --print_md
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Saving results for later
 Search for matching scenes and save to GeoJSON file
 ```
@@ -305,9 +281,7 @@ Load results and download thumbnails
 ```
 $ sat-search load results.geojson --download thumbnail
 ```
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ### sat-fetch
 - Works just like sat-search 
 - Downloads imagery for just AOIs, not entire tiles 
@@ -321,14 +295,10 @@ $ docker run --rm -v $PWD:/home/geolambda/work \
 $ cd work
 $ sat-fetch load aoi.geojson --download red green blue
 ```
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## Ngorongoro Crater
-<img src='sat-utils/footprints.gif' style="border:none; height:60%; width:60%;" />
-
-----
-
+<img src='assets/footprints.gif' style="border:none; height:60%; width:60%;" />
+</script></section><section data-markdown><script type="text/template">
 ## Landsat-8
 ```
 sat-search search 
@@ -358,19 +328,15 @@ date        eo:cloud_cover  id
 2018-05-28  3               LC08_L1TP_169062_20180528_20180605_01_T1 
 18 scenes found
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### fetching Landsat 
 ```
 $ time sat-fetch load landsat-scenes.geojson \
     --download red green blue
 real 0m59.674s 
 ```
-<div class="fragment" style="position:absolute"><img src='sat-utils/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
-
-----
-
+<div class="fragment" style="position:absolute"><img src='assets/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
+</script></section><section data-markdown><script type="text/template">
 ## Sentinel-2 
 ```
 $ sat-search search \
@@ -378,21 +344,17 @@ $ sat-search search \
     -c sentinel-2-l1c --datetime 2018-01-01/2018-08-30 \
     --save ngorongoro-sentinel-scenes.geojson --print_cal 
 ```
-<img src='sat-utils/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
-
-----
-
+<img src='assets/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
+</script></section><section data-markdown><script type="text/template">
 ## fetching Sentinel-2 
 ```
 $ time sat-fetch load sentinel-scenes.geojson \
     --download red green blue
 real 8m6.525s 
 ```
-<div class="fragment" style="position:absolute"><img src='sat-utils/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
+<div class="fragment" style="position:absolute"><img src='assets/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
 
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ### Remote vs Local Procesing
 When should I download datafile and process locally? 
 - If bounding box of your AOI is > 25% of a scene 
@@ -402,17 +364,13 @@ When should I download datafile and process locally?
 - Where are you processing
     - local, cloud machine close to data (in-region)?
 - Do you want to minimize egress costs?
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## What's next ? 
 - keep updating to keep pace with STAC specification 
 - add more public datasets 
 - first major release after STAC 0.6.0 release 
 - develop other sat-util applications for processing from metadata first
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## Under Development 
 - sat-gbdx
     - STAC command line wrapper around Digital Globe's catalog 
@@ -420,3 +378,57 @@ When should I download datafile and process locally?
     - like sat-fetch but apply operations when fetching 
     - linear stretching, band indices, pan-sharpening, etc. 
     - sat-class - process STAC Items with scikit-learn - unsupervised and supervised classification
+</script></section></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+            Reveal.initialize(options);
+        </script>
+    </body>
+</html>
