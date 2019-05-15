@@ -7,8 +7,8 @@ The presentations in this folder use reveal-js and reveal-md, so that each prese
 
 ### 2019
 
-- Cloud coverage
-
+- FOSS4G-NA San Diego
+  - STAC and sat-utils
 
 ### 2018
 
