@@ -27,3 +27,5 @@ To create the HTML files:
 
     $ reveal-md path/to/markdown.md --css path/to/style.css --theme solarized --static doc
 
+    $ reveal-md . --theme solarized --css style.css --static ../docs/2019 --static-dirs _assets
+
