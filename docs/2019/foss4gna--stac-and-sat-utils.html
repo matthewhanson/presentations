@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/theme/solarized.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
     <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="./_assets/assets/style.css" />
+    <link rel="stylesheet" href="./_assets/style.css" />
 
   </head>
   <body>
@@ -17,9 +17,9 @@
       <div class="slides"><section  data-markdown><script type="text/template"><div>Spatio Temporal Asset Catalog (STAC) and sat-utils</div>
 <hr />
 <div>
-    <img src='assets/re-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
-    <img src='assets/ds-logo2.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
-    <img src='assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/re-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/ds-logo2.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
     <div style="text-align: right; font-size: 80%">
         Matthew Hanson<br />
         Element 84<br />
@@ -49,7 +49,7 @@ Cloud friendly data demands cloud friendly metadata
     - WFS3
     - JSON/GeoJSON
 </script></section></section><section ><section data-markdown><script type="text/template">
-<img src='assets/stac-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+<img src='_assets/stac-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
 
 https://github.com/radiantearth/stac-spec/
 
@@ -427,7 +427,7 @@ $ sat-search load results.geojson --download thumbnail
 ```
 </script></section><section data-markdown><script type="text/template">
 ## Ngorongoro Crater
-<img src='assets/footprints.gif' style="border:none; height:60%; width:60%;" />
+<img src='_assets/footprints.gif' style="border:none; height:60%; width:60%;" />
 </script></section><section data-markdown><script type="text/template">
 ## Landsat-8
 ```
@@ -465,7 +465,7 @@ $ time sat-fetch load landsat-scenes.geojson \
     --download red green blue
 real 0m59.674s 
 ```
-<div class="fragment" style="position:absolute"><img src='assets/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
+<div class="fragment" style="position:absolute"><img src='_assets/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
 </script></section><section data-markdown><script type="text/template">
 ## Sentinel-2 
 ```
@@ -474,7 +474,7 @@ $ sat-search search \
     -c sentinel-2-l1c --datetime 2018-01-01/2018-08-30 \
     --save ngorongoro-sentinel-scenes.geojson --print_cal 
 ```
-<img src='assets/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
+<img src='_assets/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
 </script></section><section data-markdown><script type="text/template">
 ## fetching Sentinel-2 
 ```
@@ -482,7 +482,7 @@ $ time sat-fetch load sentinel-scenes.geojson \
     --download red green blue
 real 8m6.525s 
 ```
-<div class="fragment" style="position:absolute"><img src='assets/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
+<div class="fragment" style="position:absolute"><img src='_assets/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
 </script></section></section><section  data-markdown><script type="text/template">
 ### Remote vs Local Procesing
 When should I download datafile and process locally? 

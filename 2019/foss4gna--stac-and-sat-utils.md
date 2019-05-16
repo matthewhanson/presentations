@@ -1,9 +1,9 @@
 <div>Spatio Temporal Asset Catalog (STAC) and sat-utils</div>
 <hr />
 <div>
-    <img src='assets/re-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
-    <img src='assets/ds-logo2.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
-    <img src='assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/re-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/ds-logo2.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src='_assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
     <div style="text-align: right; font-size: 80%">
         Matthew Hanson<br />
         Element 84<br />
@@ -39,7 +39,7 @@ Cloud friendly data demands cloud friendly metadata
 
 ---
 
-<img src='assets/stac-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+<img src='_assets/stac-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
 
 https://github.com/radiantearth/stac-spec/
 
@@ -473,7 +473,7 @@ $ sat-search load results.geojson --download thumbnail
 ----
 
 ## Ngorongoro Crater
-<img src='assets/footprints.gif' style="border:none; height:60%; width:60%;" />
+<img src='_assets/footprints.gif' style="border:none; height:60%; width:60%;" />
 
 ----
 
@@ -515,7 +515,7 @@ $ time sat-fetch load landsat-scenes.geojson \
     --download red green blue
 real 0m59.674s 
 ```
-<div class="fragment" style="position:absolute"><img src='assets/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
+<div class="fragment" style="position:absolute"><img src='_assets/landsat-8.gif' style="border:none; height:70%; width:70%"></div>
 
 ----
 
@@ -526,7 +526,7 @@ $ sat-search search \
     -c sentinel-2-l1c --datetime 2018-01-01/2018-08-30 \
     --save ngorongoro-sentinel-scenes.geojson --print_cal 
 ```
-<img src='assets/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
+<img src='_assets/sentinel-ngorongoro-cal.png' style="border:none; height:35%; width:35%;" />
 
 ----
 
@@ -536,7 +536,7 @@ $ time sat-fetch load sentinel-scenes.geojson \
     --download red green blue
 real 8m6.525s 
 ```
-<div class="fragment" style="position:absolute"><img src='assets/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
+<div class="fragment" style="position:absolute"><img src='_assets/sentinel-2.gif' style="border:none; height:70%; width:70%"></div>
 
 ---
 
