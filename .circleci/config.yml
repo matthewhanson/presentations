@@ -8,7 +8,7 @@ references:
 
   container: &container
     docker:
-      - image: circleci/node:8.10.0
+      - image: circleci/node:8.15.1
 
   restore_repo: &restore_repo
     restore_cache:
