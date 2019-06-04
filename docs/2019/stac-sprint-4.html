@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./_assets/style.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><div>STAC related updates</div>
+<hr />
+<div>
+    <img src='assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <div style="text-align: right; font-size: 80%">
+        Matthew Hanson<br />
+        Element 84<br />
+        @geoskeptic
+    </div>
+</div>
+</script></section><section  data-markdown><script type="text/template">
+## What is STAC?
+
+#### 1. Metadata Model
+set of standard fields for geospatial data
+
+#### 2. catalog (static)
+linked series of files that can be crawled
+
+#### 3. api (dynamic catalog)
+RESTful API for querying geospatial data (uses WFS3)
+</script></section><section ><section data-markdown><script type="text/template">
+## 1. STAC Metadata
+
+#### Catalogs
+contains links to other Catalogs, Collections and Items
+
+#### Collections
+A set of Items that share common metadata
+
+#### Items
+A single record/scene for datetime and location
+</script></section><section data-markdown><script type="text/template">
+### Pangeo
+
+- intake-stac
+    - https://github.com/pangeo-data/intake-stac
+- STAC CMR
+    - https://cmr-stac-api.dev.element84.com/
+    - https://github.com/Element84/cmr-stac-api-proxy
+
+
+
+
+
+### sat-utils
+
+https://github.com/sat-utils
+
+- sat-api
+- sat-stac
+- sat-search
+
+
+## Open source STAC software
+
+- STAC validator (James Banting, SparkGeo)
+- Staccato (Josh Fix, Boundless/Planet)
+- CMR STAC (Jason Gilman, Element 84)
+- sat-utils
+    - family of tools
+    - https://github.com/sat-utils
+</script></section><section data-markdown><script type="text/template">
+## sat-stac
+
+- Create your own STAC catalogs
+- Used for creating Landsat and Sentinel catalogs at
+  - https://landsat.stac.cloud
+  - https://sentinel.stac.cloud
+  - http://cbers.stac.cloud/
+- Python library for working with STAC entities
+- Jupyter Tutorials
+</script></section><section data-markdown><script type="text/template">
+### sat-api
+- h/t Development Seed, Alireza, Sean Harkins
+- STAC dynamic API reference implementation
+- Node library for a (STAC) API: https://github.com/sat-utils/sat-api
+- Deployment project for deploying your own API: https://github.com/sat-utils/sat-api-deployment
+- Live API of Landsat-8 and Sentinel-2 datasets
+
+
+## sat-search
+
+- Python CLI and library for searching STAC compliant endpoints
+
+- Install via pip (Python3 only)
+
+```
+$ pip install satsearch
+$ sat-search -h
+$ sat-search search -h
+```
+</script></section><section data-markdown><script type="text/template">
+### sat-fetch
+- Works just like sat-search 
+- Downloads imagery for just AOIs, not entire tiles 
+- Requires GDAL
+</script></section></section><section  data-markdown><script type="text/template">
+### Earth Search
+
+Earth Search: https://www.element84.com/earth-search/
+
+- Landsat-8
+- Sentinel-2
+- CBERS-4
+
+Coming
+- Sentinel-1
+- NAIP
+- MODIS
+</script></section><section  data-markdown><script type="text/template"></script></section></div>
+    </div>
+
+    <script src="./lib/js/head.min.js"></script>
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
