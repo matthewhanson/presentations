@@ -16,13 +16,22 @@
 https://github.com/sat-utils
 
 - Collection of STAC related software efforts
+    - sat-api
+    - sat-stac
+    - sat-search
+    - sat-fetch
+    - sat-stac-landsat
+    - sat-stac-sentinel
 
-- sat-api
-- sat-stac
-- sat-search
-- sat-fetch
-- sat-stac-landsat
-- sat-stac-sentinel
+----
+
+## sat-api
+
+https://github.com/sat-utils/sat-api
+
+- STAC dynamic API reference implementation
+- Node library for a (STAC) API: https://github.com/sat-utils/sat-api
+- Deployment project for deploying your own API: https://github.com/sat-utils/sat-api-deployment
 
 ----
 
@@ -40,14 +49,24 @@ https://github.com/sat-utils/sat-stac
 
 ----
 
-## sat-api
+## sat-stac-landsat
 
-https://github.com/sat-utils/sat-api
+https://github.com/sat-utils/sat-stac-landsat
 
-- h/t Development Seed, Alireza, Sean Harkins
-- STAC dynamic API reference implementation
-- Node library for a (STAC) API: https://github.com/sat-utils/sat-api
-- Deployment project for deploying your own API: https://github.com/sat-utils/sat-api-deployment
+- Index Landsat scenes on AWS
+- Transform Landsat metadata to STAC
+- Lambda function for publishing Landsat STAC Items
+
+----
+
+## sat-stac-sentinel
+
+https://github.com/sat-utils/sat-stac-sentinel
+
+- Sentinel-2, Sentinel-1 coming
+- Index Sentinel scenes on AWS
+- Transform Sentinel metadata to STAC
+- Lambda function for publishing Sentinel STAC Items
 
 ----
 
@@ -55,7 +74,7 @@ https://github.com/sat-utils/sat-api
 
 https://github.com/sat-utils/sat-search
 
-- Python CLI and library for searching STAC compliant endpoints
+- Python CLI/library for searching STAC compliant endpoints
 
 ```
 $ pip install satsearch
@@ -89,6 +108,10 @@ https://github.com/sat-utils/sat-fetch
 
 https://github.com/pangeo-data/intake-stac
 
+- Plugin to Intake
+- Dynamically process STAC assets with dask
+- Part of Pangeo project
+
 ----
 
 ## STAC CMR
@@ -96,11 +119,19 @@ https://github.com/pangeo-data/intake-stac
 https://cmr-stac-api.dev.element84.com/
 https://github.com/Element84/cmr-stac-api-proxy
 
+- STAC 0.5.0 right now
+- Proxy to CMR
+    - STAC query in
+    - STAC Items out
+
 ----
 
-## sat-api-browser
+## sat-api browser
 
 https://github.com/developmentseed/sat-api-browser
+
+- Front-end to a STAC API
+- Recently opened by Development Seed
 
 ---
 
