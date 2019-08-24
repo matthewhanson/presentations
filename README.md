@@ -11,7 +11,4 @@ Most presentations here use custom CSS and designed to work with a specific them
 
 To create the HTML files:
 
-    $ reveal-md path/to/markdown.md --css path/to/style.css --theme solarized
-
-    $ reveal-md . --theme solarized --css style.css --static ../docs/2019 --static-dirs assets
-
+    $ reveal-md <path/to/markdown.md> --css path/to/style.css --theme solarized  --static ../docs/<some-directory> --static-dirs assets
