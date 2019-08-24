@@ -1,20 +1,6 @@
-# Presentations I've done for things
+## presentations i've done for things
 
-The presentations in this folder use reveal-js and reveal-md, so that each presentation is a Markdown file with associated assets. These are published as HTML pages to http://matthewhanson.github.io/presentations. However, there is currently no directory listing so you need to know the complete path to a specific presentation.
-
-
-## Listing
-
-### 2019
-
-- FOSS4G-NA San Diego
-  - STAC and sat-utils
-
-### 2018
-
-- SatSummit 3
-- FOSS4G Dar es Salaam
-- FOSS4G-NA St Louis
+The presentations in this folder use reveal-js and reveal-md, so that each presentation is a Markdown file with associated assets. These are published as HTML pages to http://matthewhanson.github.io/presentations.
 
 
 ## Serving and building presentations
