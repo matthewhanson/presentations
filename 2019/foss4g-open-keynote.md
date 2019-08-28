@@ -1,12 +1,19 @@
 <div>How Open Communities are Revolutionizing Science</div>
 <hr />
 <div>
-    <img src='assets/e84-logo.png' style="border:none; height:30%; width:30%; box-shadow:none;" />
+    <img src="assets/foss4g2019.png" />
+    <hr />
     <div style="text-align: right; font-size: 80%">
         Matthew Hanson<br />
-        @GeoSkeptic
+        @GeoSkeptic<br />
+        <img src='assets/avatar.png' height="50" width="50" style="border:none"/><br />
     </div>
+    <img src='assets/e84-logo.png' style="border:none; height:15%; width:15%; box-shadow:none;" /><br />
+    <div style="font-size: 50%">@element84</div>
 </div>
+
+Notes:
+- Hello, name, company
 
 ----
 
@@ -15,9 +22,39 @@
 Big EO Data
 
 Note:
-- Thanks to LOC for hosting
-- Invitation to give keynote on big EO data
-- Tell story of journey through FOSS4G
+- Thanks to BLOC for hosting
+- Vasile invitation to give keynote on big EO data
+- Tell story of personal journey through a history of FOSS4G
+
+---
+
+"How Open is revolutionizing science"
+<hr />
+"How Open Ideas are revolutionizing science"
+<hr />
+"How Open Software/Data/Standards are revolutionizing science"
+<hr />
+"How Open (.*) is revolutionizing science"
+<hr />
+
+Notes:
+- I played with a few variations of a title
+
+---
+
+Except...it's about the communities
+<hr />
+software, data, and standards do not create themselves
+
+Notes:
+- But it's the communities that create these, so that's the important bit
+- Let's step back to my early career
+
+----
+
+Thesis: scientists time reducing
+
+Maybe not, but do bigger and better things
 
 ---
 
@@ -28,8 +65,8 @@ Note:
 remote sensing in government
 
 - multispectral and hyperspectral exploitation
-- synethetic scene modeling
-- material mapping
+- material mapping and synethetic scene modeling
+- object detection and identification
 - image registration and geolocation
 
 Notes:
@@ -39,31 +76,36 @@ Notes:
 
 ----
 
-Open-Source pre 2010
+### FOSS4G
 
-- Used by scientists
+2010 and earlier
+
+
+Notes:
+- Birth of the FOSS4G movement in that decade
+- The first FOSS4Gs
+- Inception and rise of several important projects
+- Scientists were users, made their jobs easier
+- Govenment users, but rarely contributors
 
 ---
 
 <img src='assets/avatar.png' />
 
-### 2011 - 2015
+### 2011
 
-earth science
+pivot to earth science @ Applied Geosolutions
 
 - climate science
 - agriculture
 - forestry
-- Open Data: EO, LiDAR, SAR
-- started in open-source
-    - GeoNode, gippy, gips
+- soil carbon models
 
 Notes:
-- algorithm development
-- refactoring and reimplementing science code
-- data management
-- Downloading open data and creating ARD
-    - atmospheric correction
+- very small company
+  - not to be confused with AppGeo in Boston, or GeoSolutions in Italy
+- scientific processing pipelines
+- reimplementing science code
 
 ----
 
@@ -77,6 +119,35 @@ Notes:
   - can you turn them into vectors?
   - with vectors you can do geometric operations
 
+---
+
+# scientists are messy
+
+Notes;
+- discovered most time was spent doing non-science
+
+---
+
+<img src='assets/avatar.png' />
+
+### 2011 - 2015
+
+earth science
+
+- Open Data:
+    - EO: Landsat, Sentinel, MODIS
+    - PALSAR
+    - Airborne LiDAR for Biomass estimation
+- started contributing
+    - GeoNode
+    - GIPPY - Geospatial Image Procesing for Python
+    - GIPS - Geospatial Image Processing System
+
+Notes:
+- data management
+- Making it easier to download open data and create ARD
+    - atmospheric correction for Landsat, Sentinel
+
 ----
 
 <img src='assets/foss4g2014.png' />
@@ -85,30 +156,21 @@ satellite imagery
 
 the rise of smallsats
 
-in search of the golden basemap
-
 Notes:
-- FOSS4G-NA 2015 in San Francisco
+- Scientific track
 
----
-
-## Open Data
-  - Free data downloads, use
-
-Notes:
-- Explosion of open data
-- Landsat-8 (2013)
-- Sentinel-2A (2015)
-- Drones
-- Started talking about cloud native formats
-- Focus on how to consume data
-- Mostly scientists still doing analysis
 
 ----
 
-Images
-- NASA showing use of Landsat images after making public
-- Explosion of use on AWS - by non-scientists
+### launch of landsat-8
+
+### Landsat-7 SLC
+
+----
+
+<img src='assets/foss4gna2015.png>
+
+in search of the golden basemap
 
 ----
 
@@ -120,6 +182,54 @@ Notes:
 - Talking primarily about OSM at the time
 - Now we had data
   - developers and industry started seeing what they could do with it
+
+---
+
+Without data, there probably isn't software to begin with
+
+Notes:
+- Data drives software
+
+---
+
+## Open Data
+  - Free data downloads, use
+
+Notes:
+- Explosion of open data
+- Landsat-8 (2013)
+- Sentinel-2A (2015)
+- Drones
+- OAM
+- Started talking about cloud native formats
+- Focus on how to consume data
+- Mostly scientists still doing analysis
+
+----
+
+Images
+- NASA showing use of Landsat images after making public
+- Explosion of use on AWS - by non-scientists
+
+---
+
+<img src='assets/avatar.png'>
+
+### 2016 - 2019
+
+make remote sensing easier
+
+- International development @developmentseed
+- Open Standards for interoperability
+- Tools and libraries to make remote sensing accessible
+
+Notes:
+- Working for development seed, variety of projects in international dev
+- Users were now non-scientists
+- wanted insights and info derived from
+- wanted to improve the situation, make it easier to use...correctly
+  - still a ways to go
+- analytics and algorithms are cool, but harder than it needed to be
 
 ---
 
@@ -158,30 +268,27 @@ Notes:
 - started using it
 - poor understanding of accuracy and uncertainty
 
----
+----
 
-<img src='assets/avatar.png'>
-
-### 2016 - 2019
-
-make remote sensing easier
-
-- International development @developmentseed
-- Open Standards for interoperability
-- Tools and libraries to make remote sensing accessible
+<img src='assets/landsat8-handbook.png' />
 
 Notes:
-- Working for development seed
-- Users were now non-scientists
-- wanted insights and info derived from 
-
----
-
-”You are awesome, your software is awesome, [but] your software is useless, …without metadata.” 
+- Most users likely never cracked open the handbook
 
 ----
 
-If your metadata cannot be crawled and indexed, your data might as well not exist
+<img src='assets/landsat8-toa.png' />
+
+Notes:
+- TOA prime
+
+----
+
+#### Users assumed that data was analysis ready
+
+Notes:
+- remains true to this day
+- L8/S2 still not available cloud native formats as surface refl
 
 ---
 
@@ -189,24 +296,34 @@ If your metadata cannot be crawled and indexed, your data might as well not exis
 
 - Standards so far based on how data consumed
    - Web standards for consuming tiles
-   - CSW
 - STAC
 - ARD
 
 ----
 
-### SpatioTemporal Asset Catalogs
+#### ”You are awesome, your software is awesome, [but] your software is useless, …without metadata.” 
+
+----
+
+#### If your metadata cannot be crawled and indexed, your data might as well not exist
+
+----
+
+<img src='assets/stac-logo.png' style='border:none; height:25%; width:25%; box-shadow:none;' />
+
+SpatioTemporal Asset Catalogs
 
 https://stacspec.org/
 
+<hr />
+<div style='font-size: 50%'>
+"STAC and OS Software"
 
+Friday 9AM in Ronda Ballroom
+</div>
 ----
 
 ### Analysis Ready Data
-
-----
-
-
 
 ---
 
@@ -218,8 +335,14 @@ https://stacspec.org/
   - not sure how to mix and fuse data
   - what is analysis ready data anyway?
 
-
 - 2017 - Machine Learning
+
+----
+
+### Industry needs to turn more to scientists
+
+Notes:
+- But they have their problems as well
 
 ---
 
@@ -287,6 +410,11 @@ A community of scientists promoting open
 - dask
 
 - Executable Papers
+
+
+---
+
+@GeoSkeptic
 
 
 
