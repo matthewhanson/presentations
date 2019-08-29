@@ -14,6 +14,9 @@
 
 Notes:
 - Hello, name, company
+- NH, shortest coastline of any state, 28 km
+   - much shorter than neighboring Maine, which has longer seacoast than California
+- the seacoast = NH
 
 ----
 
@@ -23,8 +26,9 @@ Big EO Data
 
 Note:
 - Thanks to BLOC for hosting
-- Vasile invitation to give keynote on big EO data
+- Vasile invitation to give keynote because of exp with big EO data
 - Tell story of personal journey through a history of FOSS4G
+- A ceveat: my own exp, tell me where I'm wrong
 
 ---
 
@@ -39,6 +43,8 @@ Note:
 
 Notes:
 - I played with a few variations of a title
+- thought long, hard, talked with lots of folks
+- except...I eventually realized
 
 ---
 
@@ -47,14 +53,15 @@ Except...it's about the communities
 software, data, and standards do not create themselves
 
 Notes:
-- But it's the communities that create these, so that's the important bit
-- Let's step back to my early career
+- it's the communities that create these
 
 ----
 
-Thesis: scientists time reducing
+Looking back...
 
-Maybe not, but do bigger and better things
+Notes:
+- Career has largely been about helping make science easier, for scientists
+- analytics
 
 ---
 
@@ -72,7 +79,7 @@ remote sensing in government
 Notes:
 - algorithm development
 - governments owned and operated satellites
-- used by governments and scientists, not industry
+- used by governments and scientists, not industry, not tech community
 
 ----
 
@@ -80,13 +87,12 @@ Notes:
 
 2010 and earlier
 
-
 Notes:
 - Birth of the FOSS4G movement in that decade
 - The first FOSS4Gs
+- Most Scientists and governments were users
+    - but a few were contributors and creators
 - Inception and rise of several important projects
-- Scientists were users, made their jobs easier
-- Govenment users, but rarely contributors
 
 ---
 
@@ -105,7 +111,9 @@ Notes:
 - very small company
   - not to be confused with AppGeo in Boston, or GeoSolutions in Italy
 - scientific processing pipelines
-- reimplementing science code
+- implementing science code as someone who knew about remote sensing and software
+- used a lot of geospatial OS
+- and so it was
 
 ----
 
@@ -118,13 +126,30 @@ Notes:
 - don't want to display images
   - can you turn them into vectors?
   - with vectors you can do geometric operations
+- big impact
 
----
+----
 
-# scientists are messy
+returned to work thinking of OS role in science
 
-Notes;
-- discovered most time was spent doing non-science
+Notes:
+- returned to work with fresh look on things
+- saw that most time was spent doing non-science
+- streamline the process
+
+----
+
+Scientists are messy
+
+<img src='assets/scidir.png' />
+
+----
+
+Data provenance is a luxury
+
+<hr />
+
+Publishing papers is the goal
 
 ---
 
@@ -133,20 +158,21 @@ Notes;
 ### 2011 - 2015
 
 earth science
+<hr />
+Data: Landsat, Sentinel, MODIS, PALSAR, LiDAR
+<hr />
+started contributing
 
-- Open Data:
-    - EO: Landsat, Sentinel, MODIS
-    - PALSAR
-    - Airborne LiDAR for Biomass estimation
-- started contributing
-    - GeoNode
-    - GIPPY - Geospatial Image Procesing for Python
-    - GIPS - Geospatial Image Processing System
+- GeoNode
+- GIPPY - Geospatial Image Processing for Python
+- GIPS - Geospatial Image Processing System
 
 Notes:
 - data management
-- Making it easier to download open data and create ARD
-    - atmospheric correction for Landsat, Sentinel
+- Making it easier to download open data and create Analysis Ready Data
+  - surface reflectance, and cloud-masked products
+- L8/L7/L5 and S2 not available as SR
+- toward the end of my time at this company...
 
 ----
 
@@ -157,20 +183,39 @@ satellite imagery
 the rise of smallsats
 
 Notes:
-- Scientific track
-
-
-----
-
-### launch of landsat-8
-
-### Landsat-7 SLC
+- Planet becomining visible (2013)
+- Landsat-8 launched (2013)
+- thoughts of regular raster data
+- Paying attention to science, scientific track at FOSS4G was a thing
+- Things were in full swing by...
 
 ----
 
-<img src='assets/foss4gna2015.png>
+<img src='assets/foss4gna2015.png'>
 
 in search of the golden basemap
+
+Notes:
+- imagery was now available
+- interest in combinining imagery to generate 
+  - timeline and season dependent basemaps
+- Why was Planet such a big thing
+- But first, why was landsat-8 such a big thing
+
+----
+
+<img src='assets/landsat-timeline.png' />
+
+Notes:
+- landsat6 ruptured fuel chamber, caused tumbling, failed to achieve orbit
+
+----
+
+<img src='assets/landsat7-slc.jpg' />
+
+Notes:
+- SLC failure May 31, 2003
+- More pronounced at edges of scene, complete at center
 
 ----
 
@@ -180,36 +225,30 @@ in search of the golden basemap
 
 Notes:
 - Talking primarily about OSM at the time
-- Now we had data
-  - developers and industry started seeing what they could do with it
+- Well, now we had data
+  - OS community of developers in industry started seeing what they could do with it
 
----
+----
 
-Without data, there probably isn't software to begin with
-
-Notes:
-- Data drives software
-
----
-
-## Open Data
-  - Free data downloads, use
+<img src='assets/opensat-downloads.png' />
 
 Notes:
 - Explosion of open data
 - Landsat-8 (2013)
 - Sentinel-2A (2015)
 - Drones
-- OAM
-- Started talking about cloud native formats
-- Focus on how to consume data
-- Mostly scientists still doing analysis
+- OpenAerialMap
 
 ----
 
-Images
-- NASA showing use of Landsat images after making public
-- Explosion of use on AWS - by non-scientists
+The Cloud
+
+- Cloud formats (COG)
+- Focus on consuming data efficiently
+
+Notes:
+- Started talking about cloud native formats
+- Focus on how to consume data
 
 ---
 
@@ -231,7 +270,7 @@ Notes:
   - still a ways to go
 - analytics and algorithms are cool, but harder than it needed to be
 
----
+----
 
 <img src='assets/foss4g2017.png' />
 
@@ -250,7 +289,7 @@ Notes:
     - international development
 - tech world turning to science
 
----
+----
 
 ### Industry Problems
 
@@ -327,7 +366,7 @@ Friday 9AM in Ronda Ballroom
 
 ---
 
-<img src='assets/foss4g2019.png>
+<img src='assets/foss4g2019.png' />
 
 - Developer-Scientists
   - getting more savvy in use and cool results
@@ -348,24 +387,17 @@ Notes:
 
 ## Scientific Problems
 
-Scientific Community
+- Scalability
+- Reproducibility
+- Academic IP
 
-Notes:
-- Meanwhile, scientific community had problems of their own
-
-- The traditional scientific paper limited in scope
-  - Scalability
-  - Reproducibility
-  - Academic IP
-
-- Scientist coding skills
+- Coding skills
   - "spaghetti" code
   - poor data management
     - data provenance
 
-*scientists directory
-
 Notes:
+- Meanwhile, scientific community had problems of their own
 - Scientists spaghetti code
 - poor data management
 - not reproducible
@@ -382,9 +414,18 @@ Notes:
 
 
 Notes:
-- Scientitic community turning to the Open Communities
+- Scientific community turning to the Open Communities
   - not necessarily know about the cloud and efficent computing
   - hard to make changes
+
+
+----
+
+<img src='assets/landclass1.png' />
+
+----
+
+<img src='assets/landclass2.png' />
 
 ---
 
@@ -404,13 +445,19 @@ Notes:
 
 ## Pangeo
 
-A community of scientists promoting open
+http://pangeo.io
 
-- xarray
-- dask
+A community first
 
 - Executable Papers
 
+---
+
+Pangeo is a community first
+
+---
+
+Platforms come and go, communities have inertia
 
 ---
 
