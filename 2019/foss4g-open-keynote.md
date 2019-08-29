@@ -447,16 +447,9 @@ Notes:
 
 http://pangeo.io
 
-A community first
-
-- Executable Papers
-
----
-
 Pangeo is a community first
 
----
-
+Notes:
 Platforms come and go, communities have inertia
 
 ---
