@@ -14,9 +14,6 @@
 
 Notes:
 - Hello, name, company
-- NH, shortest coastline of any state, 28 km
-   - much shorter than neighboring Maine, which has longer seacoast than California
-- the seacoast = NH
 
 ----
 
@@ -25,10 +22,9 @@ Notes:
 Big EO Data
 
 Note:
-- Thanks to BLOC for hosting
+- Thanks to BLOC for hosting, accomadating 
 - Vasile invitation to give keynote because of exp with big EO data
-- Tell story of personal journey through a history of FOSS4G
-- A ceveat: my own exp, tell me where I'm wrong
+- Tell story of personal journey, which iincludes history of FOSS4G through my eyes
 
 ----
 
@@ -63,7 +59,9 @@ Looking back...
 
 Notes:
 - Career has largely been about helping make science easier, for scientists
-- analytics
+- analytics and algorithm dev
+  - always spent more time doing data preparation
+  - interesting analytics work always seemed harder than it needed it be
 
 ---
 
@@ -79,9 +77,12 @@ remote sensing in government
 - image registration and geolocation
 
 Notes:
+- background early 90s in photographic science, transition period of film to consumer digital
+- remote sensing and image processing
+- self taught software development
 - algorithm development
 - governments owned and operated satellites
-- used by governments and scientists, not industry, not tech community
+- used by governments and academia, not industry, not tech community
 
 ----
 
@@ -92,12 +93,11 @@ Notes:
 <img src='assets/osgeo.png' />
 
 Notes:
+- government consumers, not contributors
 - Birth of the FOSS4G movement in that decade
 - OSGeo formed 2006
 - The first FOSS4Gs
-- Most Scientists and governments were users
-    - but a few were contributors and creators
-- Inception and rise of several important projects
+- Inception and rise of several important projects, still in use
 
 ---
 
@@ -129,6 +129,8 @@ vectors and web mapping
 
 Notes:
 - remote sensing wasn't a big thing
+- yes, lots of OS software for dealing with rasters
+- mostly era of web mapping and vector data
 - don't want to display images
   - can you turn them into vectors?
   - with vectors you can do geometric operations
@@ -140,8 +142,8 @@ returned to work thinking of OS role in science
 
 Notes:
 - returned to work with fresh look on things
-- saw that most time was spent doing non-science
-- streamline the process
+- saw that most time scientists spent doing non-science
+- looked to streamline the process
 
 ----
 
@@ -149,13 +151,23 @@ Scientists are messy
 
 <img src='assets/scidir.png' />
 
+Notes:
+- scientists were poor at data management
+- typical work directory, with hapharzardly named files
+- don't know what was source, final product
+- no one but the scientist really knew what was going on
+  - made replication difficult
+
 ----
 
-Data provenance is a luxury
+Data provenance was a luxury
 
 <hr />
 
 Publishing papers is the goal
+
+Notes:
+- provenance seen as a luxury, no time for
 
 ---
 
@@ -174,10 +186,15 @@ started contributing
 - GIPS - Geospatial Image Processing System
 
 Notes:
-- data management
-- Making it easier to download open data and create Analysis Ready Data
+- hduring this time worked a lot with open data
+- started contributing to GeoNode to manage some of our data
+- set about to tackle problems in data management and pre-processing
+- Worked toward making it easier to download open data and create Analysis Ready Data
   - surface reflectance, and cloud-masked products
+  - that could be turned into time series
 - L8/L7/L5 and S2 not available as SR
+- created new OS proects gippy and gips
+   - automate and scale up processing large amounts of data on our servers
 - toward the end of my time at this company...
 
 ----
@@ -189,32 +206,45 @@ satellite imagery
 the rise of smallsats
 
 Notes:
-- Planet launches Doves (2013) - promise of daily fairly high res
+- just been 3 years, quite a different time
+- Planet launches Doves (2013) - which showed a possible future of having daily fairly high res
+- starting to see much lower-cost drones
+- there was more interest
+  - there was now a scientific track at FOSS4G
+  - more academics were joining the cult
 - Landsat-8 launched (2013) - big deal
-- thoughts of regular raster data
-- Low-cost drones
-- Paying attention to science, scientific track at FOSS4G was a thing
-- Momentum increased over the next year
 
 ----
 
 <img src='assets/landsat-timeline.png' />
 
 Notes:
-- landsat5 extended life span, but some regions not covered
+- 1993 landsat6 ruptured fuel chamber, caused tumbling, failed to achieve orbit
+- landsat5 extended life span (2012), but some regions not covered
   - archiving responsibility of local ground stations
-- landsat6 ruptured fuel chamber, caused tumbling, failed to achieve orbit
 - disasters were not over
+  - L7 launched 1999, and was great
 
 ----
 
 <img src='assets/landsat7-slc.jpg' />
 
 Notes:
-- launched April 1999
-- SLC failure May 31, 2003
+- after a little over 3 years, 2003, SLC failed
+  - piece of hardware compensates for forward movement of craft
 - More pronounced at edges of scene, complete at center
 - made very difficult to use
+- that's why L8 was such a big deal, combine with NASA's Open Data policy
+
+----
+
+<img src='assets/opensat-downloads.png' />
+
+Notes:
+- so now we had data
+  - Landsat-8 (2013)
+  - shortly after we had Sentinel-2A (2015)
+- use of that data exploded
 
 ----
 
@@ -223,19 +253,12 @@ Notes:
 - Schuyler Erle, 2010
 
 Notes:
-- Talking primarily about OSM at the time
-- Well, now we had data
-  - OS community of developers in industry started seeing what they could do with it
-
-----
-
-<img src='assets/opensat-downloads.png' />
-
-Notes:
-- Explosion of open data
-- Landsat-8 (2013)
-- Sentinel-2A (2015)
-- OpenAerialMap
+- Talking primarily about OSM at the time, certainly applicable here
+- there were a bunch of OS tools for rasters
+  - the use of those tools also exploded
+  - community started looking at what they could do with all this data
+- for instance, while GDAL was a long established tool
+  - python bindings were awkward, so rasterio was created 
 
 ----
 
@@ -244,9 +267,12 @@ Notes:
 in search of the golden basemap
 
 Notes:
-- imagery was now available
-- interest in combinining imagery to generate 
+- first thing the community was interested
+  - use imagery to create vectors (digitization, tracing)
+  - make basemaps to display their vector data
   - timeline and season dependent basemaps
+- There were challenges due to the large nature of datafiles
+  - But, this was also the time that the cloud started taking off
 
 ----
 
@@ -257,9 +283,10 @@ Consuming Big Data
 Notes:
 - FOSS4G community set to work on improving consumption
 - web mapping services for viewing, not for science
-- Started talking about cloud native formats
-   - to efficiently view data
-   - only access data you want
+  - needed the original unscaled image
+  - so cloud native formats were very relevant for science
+  - you could access the original data alues for any region, without downloading
+    - although, still some years for scientists to start taking advantage
 
 ---
 
@@ -270,29 +297,37 @@ Notes:
 make remote sensing easier
 
 - International development @developmentseed
-- Open Standards for interoperability
 - Tools and libraries to make data more accessible
 
 Notes:
 - Working for development seed, using sat imagery and mapping international dev
 - Users were now non-scientists
 - wanted insights and info derived from
-- analytics and algorithms are cool, but harder than it needed to be
+- analytics and algorithms are cool, but still harder than it needed to be
 - wanted to improve the situation, make it easier to use...correctly
   - still a ways to go
+  - more on "correctly" later
 
 ----
 
 sat-utils
 
+https://github.com/sat-utils
+
 - landsat-util
 - sat-api
-- indexing of AWS Public Datasets
-  - Landsat-8 and Sentinel-2
+  - public API
+  - L8 and S2 data (AWS and GCP)
 
 Notes:
-- L8 and S2 had different sets of metadata
-- I wanted to make them consistent but didn't have time
+- landsat-util was before my time
+  - very successful - search and fetch landsat scenes per band
+- sat-api also existed (it's what landsat-util used)
+  - L8 and S2
+- I started working on building upon these
+- One issue was that L8 and S2 had different metadata in sat-api
+  - I wanted to make them consistent but didn't have time
+- presentation in Bonn, then following year
 
 ----
 
@@ -303,20 +338,30 @@ machine-learning
 Notes:
 - moving beyond the basemap to analytics
 - talked about ML as it if were new
-- Data scientists
+  - even though scientists been doing this for years
+- Now we had a huge number of Data scientists
 - how to derive info, through ML pipelines - analytics
+  - not do traditional science (determine what's true from what isn't)
+  - use this data to solve problems
     - agriculture
     - climate change
-    - economics
     - international development
+    - disaster response
+    - to help inform policy
 
 ---
 
 ### We have made great progress
 
-accessing at scale
+accessing data at scale
 
-processing at scale
+processing data at scale
+
+Notes:
+- thanks to community
+- thanks to Open Data
+- thanks to advances in computing and cloud infrastructure
+- But...
 
 ----
 
@@ -325,11 +370,16 @@ discoverability at scale is still a problem
 Notes:
 - Too much data, how do we know what to run it on
 - How do we do it programmatically?
-- ML and analytics pipelines
+  - for ML and analytics pipelines
 
 ----
 
 ”You are awesome, your software is awesome, [but] your software is useless, …without ~data~ metadata” 
+
+Notes:
+- i think everyone realizes that metadata is important
+- there's always been metadata but
+- But...
 
 ----
 
@@ -346,52 +396,73 @@ SpatioTemporal Asset Catalogs
 
 https://stacspec.org/
 
-See my talk on "STAC and OS Software" from Friday morning
+See "STAC and OS Software" talk from Friday morning
 
 Notes:
 - First STAC sprint tail end of SoTM US 2017 in Boulder
 - solution to sat-utils
+- sat-utils is now a collection of STAC related utilities
+- more info see talk
 
 ----
 
-sat-utils supports STAC
-
-https://github.com/sat-utils/
-
-----
-
-### There's additional problems as well
-
-- misuse of data
-- poor understanding of remote sensing
-
-Industry misusing data
-
-Landsat TOA'
-
-Science Data Handbook
+<img src='assets/planet-stac-search.gif' />
 
 Notes:
-- Industry saw influx of open data
-- started using it
-- poor understanding of accuracy and uncertainty
+- as an example, pop in an ID and find a scene
+- because the catalog of data was crawlable
+
+----
+
+Great progress in Open Standards
+
+- discoverability
+- consumption and use
+
+Notes:
+- now we've made good progress (NOT DONE)
+- STAC is promising
+- New OGC API standards
+
+----
+
+Still we have problems 
+<hr />
+There is a poor understanding of remote sensing data which limits the value of insights derived from it
+
+Notes:
+- good at using ML approaches and analytics
+- Deep Learning has proven to be successful in many areas
+- So, the tech community saw influx of open data, started using it
+  - have done great things at improving showing what can be done with computing
 - remote sensing is difficult and complicated
+  - lots of sources of variation, over time, over scenes, atmosphere is hard
+- poor understanding of accuracy and uncertainty
+  - Not just tech community, these are also hard science problems
+  - relaying that info from scientists to non-scientists is even harder
 
 ----
 
 <img src='assets/landsat8-handbook.png' />
 
 Notes:
-- Most users likely never cracked open the handbook
+- As example, there's a handbook
+  - details of L8, how to use the data
+- Most users in tech community likely never cracked it open
 
 ----
 
-<img src='assets/landsat8-toa.png' />
+<img src='assets/landsat8-toa.png' height=90% width=90%/>
 
 Notes:
-- TOA prime
+- If they had, they would see that the distributed data is not even Top of Atmosphere
+- It is TOA prime
+  - solar elevation
+  - makes scenes not comparable from day to day or region to region
 - End users fetch data and calculate NDVI
   - arguable to use it as TOA
+- Not to say no one knows this, companies doing large-scale analysis 
+  - but maybe not everyone
 
 ----
 
@@ -400,6 +471,7 @@ Notes:
 Notes:
 - L8/S2 still not available in cloud native formats as surface refl
 - especially when it went up on AWS
+  - it was available to the masses
 
 ----
 
@@ -408,10 +480,16 @@ Notes:
 <img src='assets/ard19.png' />
 
 Notes:
-- the answer is standards
+- the answer is still standards
 - users should not have to process each type of data in different ways
 - how can we mix and fuse data from different sensors or sensor modalities
 - need to rely on scientific community to determine what is possible and what isn't
+- requires more engagement between scientists and software developers
+- This ARD initiative is perhaps a way forward to think about
+  - what ARD even is
+  - how can we communicate corrections, geometric and radiometric uncertainties
+  - so non-experts (in remote sensing) are using it in a way that is scientifically consistent
+- However, scientists also have problems
 
 ---
 
@@ -421,18 +499,23 @@ Notes:
 - Reproducibility
 - Academic IP
 
-- Coding skills
+- Software quality
   - "spaghetti" code
-  - poor data management
-    - data provenance
+  - data provenance
 
 Notes:
 - But, scientific community had problems of their own
-- Scientists spaghetti code
-- poor data management
-- not reproducible
-- not necessarily know about the cloud and efficent computing
-- hard to change scientists methods
+- yes, there has been adoption of OS, but not large-scale
+- Many scientists still doing things the old way
+  - Scientists spaghetti code
+  - poor data management
+  - unreleased data or software
+- this has led to a reproducibility problem
+  - 50% of earth science work cannot be reproduced
+- The reason why is that
+  - scientists do not necessarily know about the cloud and efficent computing
+  - and of course, change is hard, and this is cultural
+  - as an example
 
 ----
 
@@ -440,6 +523,26 @@ Notes:
 
 Notes:
 - The difference between usable OSS and code that's thrown up there
+- deployment, examples, documentation, software maintenance
+
+----
+
+These ideas are not novel
+
+Notes:
+- stated many times
+- seen a great many related talks
+- But, to be bold I will say that
+
+----
+
+Stop building platforms in search of a user community
+<hr />
+Build a user community that will help build a platform
+
+Notes:
+- the platform that will help solve their problems
+- that's why I'm exicted about one such effort called
 
 ----
 
@@ -447,15 +550,12 @@ Notes:
 
 http://pangeo.io
 
-Pangeo is a community first
+Pangeo is first and foremost a community promoting open, reproducible, and scalable science
 
 Notes:
-- But all is not lost
+- This is but one, I'm sure there are others with similar goals
+- Let's talk and collaborate
 - Platforms come and go, communities have inertia
-
-----
-
-Pangeo is first and foremost a community promoting open, reproducible, and scalable science
 
 ----
 
@@ -463,18 +563,22 @@ The Pangeo project serves as a coordination point between scientists, software, 
 
 ----
 
-Pangeo Goals
+### Pangeo Goals
 
 1. Foster collaboration around the open source scientific python ecosystem for ocean / atmosphere / land / climate science.
 2. Support the development with domain-specific geoscience packages.
 3. Improve scalability of these tools to handle petabyte-scale datasets on HPC and cloud platforms.
 
-Notes:
-- Executable papers
-
 ----
 
-Pangeo Example
+<img src='assets/pangeo-example.gif' />
+
+Notes:
+- Jupyter in the cloud
+- the data is stored in the cloud in cloud friendly formats
+- algorithm is open
+- Executable paper
+- This was possible because of
 
 ----
 
@@ -485,9 +589,6 @@ Open Standards
 Open Data
 
 Open Science
-
-Notes:
-- This is now possible with open
 
 ---
 
