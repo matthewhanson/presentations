@@ -573,6 +573,8 @@ The Pangeo project serves as a coordination point between scientists, software, 
 
 <img src='assets/pangeo-example.gif' />
 
+courtesy of [Rich Signell](https://www.youtube.com/watch?v=2TkZa0s58qs)
+
 Notes:
 - Jupyter in the cloud
 - the data is stored in the cloud in cloud friendly formats
