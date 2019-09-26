@@ -156,7 +156,39 @@ Notes:
 
 ----
 
-<insert slides here>
+TIFF Striped Segments
+
+<img src='assets/cog1.png' />
+
+----
+
+TIFF Striped Segments = Bad
+
+<img src='assets/cog2.png' />
+
+----
+
+TIFF Tiled Segments
+
+<img src='assets/cog3.png' />
+
+----
+
+TIFF Tiled Segments = Good
+
+<img src='assets/cog4.png' />
+
+----
+
+TIFF Tiled Segments = Good
+
+<img src='assets/cog5.png' />
+
+----
+
+Overviews
+
+<img src='assets/cog6.png' />
 
 ----
 
@@ -167,8 +199,11 @@ Cloud Native Geospatial Data Formats
   - excellent compression
   - intensive encoding/decoding
 - TileDB
-  - New on the scene, GDAL driver
+  - New on the scene
+  - Performant
 - Zarr
+  - Useful for global gridded data (e.g., climate data)
+  - No GDAL driver
 
 Notes:
 - Different formats
@@ -315,6 +350,8 @@ Notes:
   - "spaghetti" code
   - data provenance
 
+- "Open Source" vs publicly available software
+
 Notes:
 - But, scientific community had problems of their own
 - yes, there has been adoption of OS, but not large-scale
@@ -327,35 +364,10 @@ Notes:
 - The reason why is that
   - scientists do not necessarily know about the cloud and efficent computing
   - and of course, change is hard, and this is cultural
-  - as an example
-
-----
-
-Crisis within the scientific community
-
-has created a crisis within the data science community
-
-----
-
-50% of papers cannot be reproduced
-
-----
-
-
-"Open Source" vs publicly available software
-
-Notes:
 - The difference between usable OSS and code that's thrown up there
 - deployment, examples, documentation, software maintenance
-
-----
-
-These ideas are not novel
-
-Notes:
-- stated many times
-- seen a great many related talks
-- But, to be bold I will say that
+- Various groups have built platforms
+   - They are useful, but not widely adopted
 
 ----
 
