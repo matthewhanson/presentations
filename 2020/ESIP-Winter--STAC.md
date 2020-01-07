@@ -8,7 +8,7 @@ ESIP 2020 Winter Meeting
 - 11:00 - Matt Hanson, Element 84
     - [STAC and OS Ecosystem](https://docs.google.com/presentation/d/1nLrKkPi3c3gCONh_2vg_QfCsJreonwc_4LgW7OYeCHM/edit?usp=sharing)
 
-- 11:20 - Tom Kralidis, Canadian Meterological Survey
+- 11:20 - Tom Kralidis, Meterological Service of Canada
     - [pygeoapi: An OGC API to Geospatial Data](https://pygeoapi.io/presentations/default/#/frontpage)
 
 - 11:35 - Kristi Kline, USGS
